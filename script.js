@@ -45,11 +45,11 @@ const DEFAULT_DATABASE = [
     { "q": "Som do <b>פּ</b>", "a": "<b>P</b>", "cat": "som" },
     { "q": "Som do <b>ת</b>", "a": "<b>T</b>", "cat": "som" },
     { "q": "Som do <b>תּ</b>", "a": "<b>T</b>", "cat": "som" },
-    { "q": "<b>כ</b> é idêntico a:", "a": "<b>ק</b>", "cat": "identico" },
-    { "q": "<b>ת</b> é idêntico a:", "a": "<b>ט</b>", "cat": "identico" },
-    { "q": "<b>ב</b> é idêntico a:", "a": "<b>ו</b>", "cat": "identico" },
-    { "q": "<b>ע</b> é idêntico a:", "a": "<b>א</b>", "cat": "identico" },
-    { "q": "<b>שׂ</b> (sin) é idêntico a:", "a": "<b>ס</b>", "cat": "identico" }
+    { "q": "<b>כ</b> é igual a:", "a": "<b>ק</b>", "cat": "identico" },
+    { "q": "<b>ת</b> é igual a:", "a": "<b>ט</b>", "cat": "identico" },
+    { "q": "<b>ב</b> é igual a:", "a": "<b>ו</b>", "cat": "identico" },
+    { "q": "<b>ע</b> é igual a:", "a": "<b>א</b>", "cat": "identico" },
+    { "q": "<b>שׂ</b> (sin) é igual a:", "a": "<b>ס</b>", "cat": "identico" }
 ];
 
 let cards = [];
