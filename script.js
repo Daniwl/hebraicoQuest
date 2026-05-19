@@ -76,8 +76,8 @@ function init() {
 
     const baseCards = [];
     DEFAULT_DATABASE.forEach((item, index) => {
-        baseCards.push({ ...item, id: `cat-${index}`, level: 0, nextReview: 0 });
-        baseCards.push({ ...item, id: `mix-${index}`, cat: "Tudo Misturado", level: 0, nextReview: 0 });
+        baseCards.push({ ...item, id: `cat-${index}`, originalCat: item.cat, level: 0, nextReview: 0 });
+        baseCards.push({ ...item, id: `mix-${index}`, originalCat: item.cat, cat: "Tudo Misturado", level: 0, nextReview: 0 });
     });
 
     const savedData = localStorage.getItem('hebraico_quest_data');
@@ -290,8 +290,10 @@ function renderCard() {
 function generateAlternatives(correctCard) {
     const correctText = getAnswerText(correctCard);
     
+    // Filtra pelo originalCat para garantir que as alternativas sejam do mesmo tipo (ex: letra com letra)
     const distractorsPool = cards.filter(c => 
         c.cat === correctCard.cat && 
+        c.originalCat === correctCard.originalCat &&
         getAnswerText(c) !== correctText
     );
 
