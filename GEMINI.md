@@ -40,6 +40,13 @@ Este arquivo serve como o "Cérebro" do projeto, documentando as decisões, estr
 - **V1.2 (Redesign Codex):** Migração para o layout de Sidebar e estética profissional.
 - **V1.3 (Universalização):** Internalização dos dados no JS para evitar bloqueios de CORS e implementação de Menu Mobile.
 - **V1.4 (Correção Feedback):** Ajuste fino nas cores verde/vermelho vibrantes e restauração da tipografia original.
+- **V1.5 (Refatoração de UX e Navegação):**
+  - Implementação de menu lateral em formato de sanfona (accordion) para categorias.
+  - Integração da Home ao layout principal, mantendo a sidebar visível.
+  - Isolamento total de progresso para o modo "Tudo Misturado" (cards independentes).
+  - Otimização mobile: simplificação de termos ("igual a"), implementação de scroll na área principal e unificação tipográfica (PC/Mobile).
+  - Remoção de redundâncias visuais nos textos ("sem ponto").
+  - Publicação automatizada no GitHub Pages.
 
 ---
 *Este documento deve ser atualizado a cada grande mudança arquitetural.*
