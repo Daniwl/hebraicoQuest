@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HebraicoQuest - Flashcards</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="menu-toggle" class="menu-toggle-btn" title="Abrir Menu">☰</button>
+    <div id="sidebar-overlay" class="sidebar-overlay"></div>
+    
+    <div class="app-layout">
+        <aside id="sidebar" class="sidebar">
+            <div class="sidebar-header">
+                <h2>HebraicoQuest</h2>
+                <button id="theme-toggle" class="theme-toggle-btn" title="Alternar Tema">🌓</button>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <div class="nav-section accordion-section">
+                    <h3 id="hebraico-menu-toggle" class="accordion-header">
+                        Hebraico 
+                        <span class="accordion-icon">▾</span>
+                    </h3>
+                    <div id="category-menu-sidebar" class="category-menu-sidebar accordion-content">
+                        <!-- Botões de categoria serão inseridos aqui -->
+                    </div>
+                </div>
+
+                <div class="nav-section">
+                    <h3>Progresso</h3>
+                    <div id="stats-container" class="stats-container">
+                        <!-- Blocos de progresso por categoria serão inseridos aqui -->
+                    </div>
+                </div>
+
+                <div class="nav-section">
+                    <h3>Menu</h3>
+                    <button id="back-to-menu-btn" class="nav-btn-secondary">Voltar ao Início</button>
+                </div>
+
+                <div class="nav-section">
+                    <h3>Atalhos</h3>
+                    <ul class="shortcut-list">
+                        <li><kbd>1</kbd>-<kbd>3</kbd> Escolher</li>
+                        <li><kbd>Enter</kbd> Próximo</li>
+                        <li><kbd>Esc</kbd> Menu</li>
+                    </ul>
+                </div>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <!-- TELA INICIAL INTEGRADA -->
+            <div id="start-screen" class="start-screen">
+                <div class="start-content">
+                    <h1>HebraicoQuest</h1>
+                    <p>Escolha o que deseja treinar hoje:</p>
+                    <div id="category-list" class="category-grid">
+                        <!-- Botões de categoria aqui -->
+                    </div>
+                    <button id="train-all-btn" class="btn-all">Tudo Misturado</button>
+                </div>
+            </div>
+
+            <div id="training-area" class="card-container hidden">
+                <div id="flashcard" class="codex-card">
+                    <div id="card-content" class="card-glyph">
+                        <!-- Pergunta aqui -->
+                    </div>
+                </div>
+
+                <div id="options" class="options-grid">
+                    <!-- Botões aqui -->
+                </div>
+
+                <div id="feedback-area" class="feedback-panel hidden">
+                    <div id="feedback-message" class="feedback-status"></div>
+                    <div id="full-answer" class="answer-details"></div>
+                    <button id="next-btn" class="continue-btn">Continuar <span class="shortcut">↵</span></button>
+                </div>
+
+                <div id="completion-screen" class="completion-panel hidden">
+                    <div class="completion-icon">✅</div>
+                    <h2>Tudo revisado!</h2>
+                    <p id="completion-msg">Você completou todos os cards desta categoria por enquanto.</p>
+                    <div class="completion-actions">
+                        <button id="finish-btn" class="continue-btn">Voltar ao Início <span class="shortcut">Esc</span></button>
+                        <button id="reset-session-btn" class="nav-btn-secondary">Resetar e Estudar Tudo de Novo</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
