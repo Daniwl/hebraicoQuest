@@ -15,8 +15,10 @@
     --error-bg: #dc3545;
     --error-text: #ffffff;
     
-    /* Fonte Unificada: Garante consistência didática em qualquer dispositivo */
-    --font-main: "Assistant", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    /* Fontes do Sistema para UI */
+    --font-main: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    /* Fonte Específica para Hebraico */
+    --font-hebrew: "Times New Roman", Times, serif;
 }
 
 [data-theme="dark"] {
@@ -44,6 +46,11 @@ body {
     display: flex;
     overflow: hidden; /* O layout principal é fixo, o scroll acontece no main-content */
     transition: all 0.3s ease;
+}
+
+/* Força a fonte de UI em elementos que podem ter estilos de navegador ou herança indesejada */
+h1, h2, h3, h4, h5, h6, button, input, select, textarea, span, p, label {
+    font-family: var(--font-main);
 }
 
 /* Layout */
@@ -329,6 +336,15 @@ kbd {
     word-break: break-word;
 }
 
+.card-glyph, 
+.card-glyph *,
+.options-grid button,
+.options-grid button *,
+.answer-details,
+.answer-details * {
+    font-family: var(--font-hebrew) !important;
+}
+
 .card-glyph {
     font-size: 2.2rem;
     line-height: 1.3;
@@ -348,12 +364,11 @@ kbd {
 }
 
 .options-grid button {
-    font-family: var(--font-main);
     background: var(--card-bg);
     border: 1px solid var(--border-color);
     border-radius: 12px;
     padding: 16px 24px;
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     font-weight: 600;
     color: var(--text-primary);
     cursor: pointer;
@@ -362,7 +377,7 @@ kbd {
     align-items: center;
     gap: 12px;
     transition: all 0.2s ease;
-    min-height: 60px;
+    min-height: 80px;
 }
 
 .options-grid button:hover {
@@ -408,7 +423,8 @@ kbd {
 }
 
 .answer-details {
-    font-size: 1.4rem;
+    font-family: var(--font-hebrew);
+    font-size: 2rem;
     line-height: 1.5;
     margin-bottom: 32px;
     font-weight: 800;
